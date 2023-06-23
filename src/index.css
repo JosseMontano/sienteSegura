@@ -1,12 +1,17 @@
 .containerChat {
   position: fixed;
-  top: 85%;
+  bottom: 0;
   right: 0%;
 }
 
 .containerContent {
   background-color: red;
   height: 200px;
+
+  position: fixed;
+  bottom: 0;
+  right: 0%;
+  margin-bottom: 25px;
 }
 
 .iconoChat {

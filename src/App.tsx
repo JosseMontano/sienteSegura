@@ -33,11 +33,13 @@ function App() {
         <h2>hola qu tal</h2>
       </div>
 
-      <div className="containerChat">
-        <div className="iconoChat" onClick={handleShowChat}>
-          <img src={ImgRobot} alt="" />
+      {!showChat && (
+        <div className="containerChat">
+          <div className="iconoChat" onClick={handleShowChat}>
+            <img src={ImgRobot} alt="" />
+          </div>
         </div>
-      </div>
+      )}
 
       {showChat && (
         <div className="containerContent">
