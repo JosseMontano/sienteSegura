@@ -96,7 +96,9 @@ function App() {
               ))}
             </div>
 
-            <div className="containerResponse">{responseQuestion}</div>
+            {responseQuestion && (
+              <div className="containerResponse">{responseQuestion}</div>
+            )}
           </div>
         </div>
       )}
