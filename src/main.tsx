@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
+import Login from "./login";
 import "./index.css";
 import { Route, Routes, HashRouter } from "react-router-dom";
 
@@ -9,7 +10,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <HashRouter>
       <Routes>
         <Route path={"/"} element={<App />} />
-        <Route path={"/login"} element={<App />} />
+        <Route path={"/login"} element={<Login />} />
 
         <Route path="*" element={<p>Page no found</p>} />
       </Routes>
