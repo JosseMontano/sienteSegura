@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import './Formu2.css';
-import LabelComponent from './components/formQuiz/label';
-import { useNavigate } from 'react-router';
+import React, { useState } from "react";
+import "./Formu2.css";
+import LabelComponent from "./components/formQuiz/label";
+import { useNavigate } from "react-router";
+import NavbarComponent from "./components/navbar";
 
 interface VecLabelType {
   id: number;
@@ -11,7 +12,7 @@ interface VecLabelType {
 }
 
 const Formu2: React.FC = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const [respuestas, setRespuestas] = useState<string[]>([]);
 
   const handleChange = (preguntaIndex: number, respuestaIndex: number) => {
@@ -23,7 +24,7 @@ const Formu2: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log(respuestas);
-    navigate('/Formu3')
+    navigate("/Formu3");
   };
 
   const vecLabel: VecLabelType[] = [
@@ -36,7 +37,7 @@ const Formu2: React.FC = () => {
     {
       id: 2,
       name: "respuesta",
-      value: 1, 
+      value: 1,
       response: "En ocasiones",
     },
     {
@@ -48,100 +49,155 @@ const Formu2: React.FC = () => {
   ];
 
   return (
-    <div className="container-formulario2">
-      <h1 className="Title-Form2">Cuestionario</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="container-pregunta">
-          <h3>¿Te empuja, te golpea, te pellizca?</h3>
-          <div className="container-respuestas">
-            {vecLabel.map((v) => (
-              <LabelComponent handleChange={() => handleChange(0, v.value)} v={v} />
-            ))}
+    <>
+      <NavbarComponent />
+
+      <div className="container-formulario2">
+        <h1 className="Title-Form2">Cuestionario</h1>
+        <form onSubmit={handleSubmit}>
+          <div className="container-pregunta">
+            <h3>¿Te empuja, te golpea, te pellizca?</h3>
+            <div className="container-respuestas">
+              {vecLabel.map((v) => (
+                <LabelComponent
+                  handleChange={() => handleChange(0, v.value)}
+                  v={v}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="container-pregunta">
-          <h3>¿Evitas tocar ciertos temas o hacer ciertas cosas por temor a la reacción de tu pareja?</h3>
-          <div className="container-respuestas">
-            {vecLabel.map((v) => (
-              <LabelComponent handleChange={() => handleChange(0, v.value)} v={v} />
-            ))}
+          <div className="container-pregunta">
+            <h3>
+              ¿Evitas tocar ciertos temas o hacer ciertas cosas por temor a la
+              reacción de tu pareja?
+            </h3>
+            <div className="container-respuestas">
+              {vecLabel.map((v) => (
+                <LabelComponent
+                  handleChange={() => handleChange(0, v.value)}
+                  v={v}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="container-pregunta">
-          <h3>¿Sientes culpa o responsabilidad por las reacciones violentas de quien te agrede?</h3>
-          <div className="container-respuestas">
-            {vecLabel.map((v) => (
-              <LabelComponent handleChange={() => handleChange(0, v.value)} v={v} />
-            ))}
+          <div className="container-pregunta">
+            <h3>
+              ¿Sientes culpa o responsabilidad por las reacciones violentas de
+              quien te agrede?
+            </h3>
+            <div className="container-respuestas">
+              {vecLabel.map((v) => (
+                <LabelComponent
+                  handleChange={() => handleChange(0, v.value)}
+                  v={v}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="container-pregunta">
-          <h3>¿Tienes conocimiento si tu pareja ha violentado a parejas anteriores?</h3>
-          <div className="container-respuestas">
-            {vecLabel.map((v) => (
-              <LabelComponent handleChange={() => handleChange(0, v.value)} v={v} />
-            ))}
+          <div className="container-pregunta">
+            <h3>
+              ¿Tienes conocimiento si tu pareja ha violentado a parejas
+              anteriores?
+            </h3>
+            <div className="container-respuestas">
+              {vecLabel.map((v) => (
+                <LabelComponent
+                  handleChange={() => handleChange(0, v.value)}
+                  v={v}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="container-pregunta">
-          <h3>¿Tu pareja es excesivamente celosa o posesiva?</h3>
-          <div className="container-respuestas">
-            {vecLabel.map((v) => (
-              <LabelComponent handleChange={() => handleChange(0, v.value)} v={v} />
-            ))}
+          <div className="container-pregunta">
+            <h3>¿Tu pareja es excesivamente celosa o posesiva?</h3>
+            <div className="container-respuestas">
+              {vecLabel.map((v) => (
+                <LabelComponent
+                  handleChange={() => handleChange(0, v.value)}
+                  v={v}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="container-pregunta">
-          <h3>¿Te has aislado de tu familia, amigas y amigos?</h3>
-          <div className="container-respuestas">
-            {vecLabel.map((v) => (
-              <LabelComponent handleChange={() => handleChange(0, v.value)} v={v} />
-            ))}
+          <div className="container-pregunta">
+            <h3>¿Te has aislado de tu familia, amigas y amigos?</h3>
+            <div className="container-respuestas">
+              {vecLabel.map((v) => (
+                <LabelComponent
+                  handleChange={() => handleChange(0, v.value)}
+                  v={v}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="container-pregunta">
-          <h3>¿Crees que con tu sacrificio tu pareja puede cambiar?</h3>
-          <div className="container-respuestas">
-            {vecLabel.map((v) => (
-              <LabelComponent handleChange={() => handleChange(0, v.value)} v={v} />
-            ))}
+          <div className="container-pregunta">
+            <h3>¿Crees que con tu sacrificio tu pareja puede cambiar?</h3>
+            <div className="container-respuestas">
+              {vecLabel.map((v) => (
+                <LabelComponent
+                  handleChange={() => handleChange(0, v.value)}
+                  v={v}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="container-pregunta">
-          <h3>¿Sientes que tu pareja tiene la razón en sus críticas, quejas o reclamos contra ti?</h3>
-          <div className="container-respuestas">
-            {vecLabel.map((v) => (
-              <LabelComponent handleChange={() => handleChange(0, v.value)} v={v} />
-            ))}
+          <div className="container-pregunta">
+            <h3>
+              ¿Sientes que tu pareja tiene la razón en sus críticas, quejas o
+              reclamos contra ti?
+            </h3>
+            <div className="container-respuestas">
+              {vecLabel.map((v) => (
+                <LabelComponent
+                  handleChange={() => handleChange(0, v.value)}
+                  v={v}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="container-pregunta">
-          <h3>¿Tienes relaciones sexuales sin consentimiento?</h3>
-          <div className="container-respuestas">
-            {vecLabel.map((v) => (
-              <LabelComponent handleChange={() => handleChange(0, v.value)} v={v} />
-            ))}
+          <div className="container-pregunta">
+            <h3>¿Tienes relaciones sexuales sin consentimiento?</h3>
+            <div className="container-respuestas">
+              {vecLabel.map((v) => (
+                <LabelComponent
+                  handleChange={() => handleChange(0, v.value)}
+                  v={v}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="container-pregunta">
-          <h3>¿Te amenaza con quitarte a tus hijos o tus bienes si terminas la relación o denuncias?</h3>
-          <div className="container-respuestas">
-            {vecLabel.map((v) => (
-              <LabelComponent handleChange={() => handleChange(0, v.value)} v={v} />
-            ))}
+          <div className="container-pregunta">
+            <h3>
+              ¿Te amenaza con quitarte a tus hijos o tus bienes si terminas la
+              relación o denuncias?
+            </h3>
+            <div className="container-respuestas">
+              {vecLabel.map((v) => (
+                <LabelComponent
+                  handleChange={() => handleChange(0, v.value)}
+                  v={v}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="container-pregunta">
-          <h3>¿Ha vuelto a agredirte después de haber prometido que no vuelve a hacer?</h3>
-          <div className="container-respuestas">
-            {vecLabel.map((v) => (
-              <LabelComponent handleChange={() => handleChange(0, v.value)} v={v} />
-            ))}
+          <div className="container-pregunta">
+            <h3>
+              ¿Ha vuelto a agredirte después de haber prometido que no vuelve a
+              hacer?
+            </h3>
+            <div className="container-respuestas">
+              {vecLabel.map((v) => (
+                <LabelComponent
+                  handleChange={() => handleChange(0, v.value)}
+                  v={v}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <button type="submit">Enviar</button>
-      </form>
-    </div>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </>
   );
 };
 
