@@ -1,7 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
+<<<<<<< HEAD
 import Formu from "./Formu";
+=======
+import Login from "./login";
+import Register from "./register";
+>>>>>>> cd3a705e99cfad65e71e461921f86d26ccd1a957
 import "./index.css";
 import { Route, Routes, HashRouter } from "react-router-dom";
 import Formu2 from "./Formu2";
@@ -12,10 +17,15 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <HashRouter>
       <Routes>
         <Route path={"/"} element={<App />} />
+<<<<<<< HEAD
         <Route path={"/Formu"} element={<Formu />} />
         <Route path={"/Formu2"} element={<Formu2 />} />
         <Route path={"/Formu3"} element={<Formu3 />} />
         <Route path={"/login"} element={<App />} />
+=======
+        <Route path={"/login"} element={<Login />} />
+        <Route path={"/register"} element={<Register />} />
+>>>>>>> cd3a705e99cfad65e71e461921f86d26ccd1a957
 
         <Route path="*" element={<p>Page not found</p>} />
       </Routes>
