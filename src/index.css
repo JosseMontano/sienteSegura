@@ -10,20 +10,44 @@ body {
 }
 
 /*------ChatBot------------*/
+*{
+  box-sizing: border-box;
+}
+
 .containerChat {
   position: fixed;
   bottom: 0;
   right: 0%;
+  margin-bottom: 10px;
 }
 
 .containerContent {
-  background-color: red;
+  background-color: #ffccf7;
   height: 200px;
-
+  width: 350px;
+  height: 380px;
   position: fixed;
   bottom: 0;
   right: 0%;
-  margin-bottom: 25px;
+  margin: 0px 25px 25px 0px;
+  overflow-y: scroll;
+  border-radius: 15px;
+}
+
+.container_header {
+  display: flex;
+  flex-direction: row;
+}
+
+.container_header .title {
+  width: 350px;
+  text-align: center;
+}
+
+.containerContent .close {
+  text-align: end;
+  width: 10px;
+  margin-right: 10px;
 }
 
 .iconoChat {
@@ -107,3 +131,38 @@ body {
 
 
 
+.containerQuestions{
+  display:flex;
+  flex-direction: column;
+  gap:10px;
+  align-items: flex-end;
+}
+
+.questionChat{
+  background-color: #8793e4;
+  width: 200px;
+  height: 80px;
+  padding: 0px 7px;
+  margin-right: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  color:#fff;
+  font-weight: bold;
+}
+
+.questionChat:hover{
+  transform: scale(1.1);
+}
+
+.containerResponse{
+  background-color: #5ce1e6;
+  width: 200px;
+  padding: 10px 7px;
+  margin-left: 15px;
+  margin-top: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
