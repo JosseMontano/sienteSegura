@@ -1,12 +1,12 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-function Login() {
+function Register() {
   return (
         <Container_son>
           <Conatiner_center>
           <h3>AURORA</h3>
-          <p>Registrate en nuestra pagina</p>
+          <p>Bienvenidos a Aurora</p>
         <Imputs>
           <input type="text" id="username"/>
         </Imputs>
@@ -17,22 +17,22 @@ function Login() {
           <input type="password" id="username"/>
           </Imputs>
           <label htmlFor="password">Contraseña</label>
-          <label htmlFor="password-confirmed">Confirma tu contraseña</label>
 
         <div>
-            <Buttons>Registrar</Buttons>
+            <Buttons>Iniciar Sesion</Buttons>
         </div>
 
-        <Register>
-          <p>Ya te registraste → </p>
-          <Buttons>Iniciar Sension</Buttons>
-        </Register>
+        <Registro>
+          <p>Aun no tienes una cuenta? → </p>
+          <Buttons>Registrate</Buttons>
+        </Registro>
         </Conatiner_center>   
       </Container_son>
   )
 }
 
-export default Login
+export default Register
+
 const Container_son = styled.div`
 background-color: #fff;
 height: 100vh;
@@ -61,7 +61,7 @@ border-radius: 20px;
 height: 30px;
 width: 100px;
 `;
-const Register=styled.div`
+const Registro = styled.div`
 display: flex;
 justify-content:center;
 align-items: center;
