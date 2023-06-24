@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import './Formu.css';
-import LabelComponent from './components/formQuiz/label';
-import { useNavigate } from 'react-router';
+import React, { useState } from "react";
+import "./Formu.css";
+import LabelComponent from "./components/formQuiz/label";
+import { useNavigate } from "react-router";
+import NavbarComponent from "./components/navbar";
 
 interface VecLabelType {
   id: number;
@@ -11,7 +12,7 @@ interface VecLabelType {
 }
 
 const Formu: React.FC = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const [respuestas, setRespuestas] = useState<string[]>([]);
 
   const handleChange = (preguntaIndex: number, respuestaIndex: number) => {
@@ -23,7 +24,7 @@ const Formu: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log(respuestas);
-    navigate('/Formu2')
+    navigate("/Formu2");
   };
 
   const vecLabel: VecLabelType[] = [
@@ -36,7 +37,7 @@ const Formu: React.FC = () => {
     {
       id: 2,
       name: "respuesta",
-      value: 1, 
+      value: 1,
       response: "En ocasiones",
     },
     {
@@ -48,100 +49,139 @@ const Formu: React.FC = () => {
   ];
 
   return (
-    <div className="container-formulario">
-      <h1 className="Title-Form1">Cuestionario</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="container-pregunta1">
-          <h3>¿Te culpa por sus cambios de ánimo?</h3>
-          <div className="container-respuestas1">
-            {vecLabel.map((v) => (
-              <LabelComponent handleChange={() => handleChange(0, v.value)} v={v} />
-            ))}
+    <>
+      <NavbarComponent />
+      <div className="container-formulario">
+        <h1 className="Title-Form1">Cuestionario</h1>
+        <form onSubmit={handleSubmit}>
+          <div className="container-pregunta1">
+            <h3>¿Te culpa por sus cambios de ánimo?</h3>
+            <div className="container-respuestas1">
+              {vecLabel.map((v) => (
+                <LabelComponent
+                  handleChange={() => handleChange(0, v.value)}
+                  v={v}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="container-pregunta1">
-          <h3>¿Te culpa por sus malestares o frustraciones?</h3>
-          <div className="container-respuestas1">
-            {vecLabel.map((v) => (
-              <LabelComponent handleChange={() => handleChange(0, v.value)} v={v} />
-            ))}
+          <div className="container-pregunta1">
+            <h3>¿Te culpa por sus malestares o frustraciones?</h3>
+            <div className="container-respuestas1">
+              {vecLabel.map((v) => (
+                <LabelComponent
+                  handleChange={() => handleChange(0, v.value)}
+                  v={v}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="container-pregunta1">
-          <h3>¿Te amanaza o chantajea?</h3>
-          <div className="container-respuestas1">
-            {vecLabel.map((v) => (
-              <LabelComponent handleChange={() => handleChange(0, v.value)} v={v} />
-            ))}
+          <div className="container-pregunta1">
+            <h3>¿Te amanaza o chantajea?</h3>
+            <div className="container-respuestas1">
+              {vecLabel.map((v) => (
+                <LabelComponent
+                  handleChange={() => handleChange(0, v.value)}
+                  v={v}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="container-pregunta1">
-          <h3>¿Te grita, se burla de ti, te humilla?</h3>
-          <div className="container-respuestas1">
-            {vecLabel.map((v) => (
-              <LabelComponent handleChange={() => handleChange(0, v.value)} v={v} />
-            ))}
+          <div className="container-pregunta1">
+            <h3>¿Te grita, se burla de ti, te humilla?</h3>
+            <div className="container-respuestas1">
+              {vecLabel.map((v) => (
+                <LabelComponent
+                  handleChange={() => handleChange(0, v.value)}
+                  v={v}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="container-pregunta1">
-          <h3>¿Desestima tus opiniones y te critica?</h3>
-          <div className="container-respuestas1">
-            {vecLabel.map((v) => (
-              <LabelComponent handleChange={() => handleChange(0, v.value)} v={v} />
-            ))}
+          <div className="container-pregunta1">
+            <h3>¿Desestima tus opiniones y te critica?</h3>
+            <div className="container-respuestas1">
+              {vecLabel.map((v) => (
+                <LabelComponent
+                  handleChange={() => handleChange(0, v.value)}
+                  v={v}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="container-pregunta1">
-          <h3>¿Controla tu forma de vestir?</h3>
-          <div className="container-respuestas1">
-            {vecLabel.map((v) => (
-              <LabelComponent handleChange={() => handleChange(0, v.value)} v={v} />
-            ))}
+          <div className="container-pregunta1">
+            <h3>¿Controla tu forma de vestir?</h3>
+            <div className="container-respuestas1">
+              {vecLabel.map((v) => (
+                <LabelComponent
+                  handleChange={() => handleChange(0, v.value)}
+                  v={v}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="container-pregunta1">
-          <h3>¿Te prohíbe decidir sobre tu dinero y tus bienes?</h3>
-          <div className="container-respuestas1">
-            {vecLabel.map((v) => (
-              <LabelComponent handleChange={() => handleChange(0, v.value)} v={v} />
-            ))}
+          <div className="container-pregunta1">
+            <h3>¿Te prohíbe decidir sobre tu dinero y tus bienes?</h3>
+            <div className="container-respuestas1">
+              {vecLabel.map((v) => (
+                <LabelComponent
+                  handleChange={() => handleChange(0, v.value)}
+                  v={v}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="container-pregunta1">
-          <h3>¿Controla tu hora de salida, de llegada, o uso del tiempo en general?</h3>
-          <div className="container-respuestas1">
-            {vecLabel.map((v) => (
-              <LabelComponent handleChange={() => handleChange(0, v.value)} v={v} />
-            ))}
+          <div className="container-pregunta1">
+            <h3>
+              ¿Controla tu hora de salida, de llegada, o uso del tiempo en
+              general?
+            </h3>
+            <div className="container-respuestas1">
+              {vecLabel.map((v) => (
+                <LabelComponent
+                  handleChange={() => handleChange(0, v.value)}
+                  v={v}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="container-pregunta1">
-          <h3>¿Te obliga a mantener su relación en la clandestinidad?</h3>
-          <div className="container-respuestas1">
-            {vecLabel.map((v) => (
-              <LabelComponent handleChange={() => handleChange(0, v.value)} v={v} />
-            ))}
+          <div className="container-pregunta1">
+            <h3>¿Te obliga a mantener su relación en la clandestinidad?</h3>
+            <div className="container-respuestas1">
+              {vecLabel.map((v) => (
+                <LabelComponent
+                  handleChange={() => handleChange(0, v.value)}
+                  v={v}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="container-pregunta1">
-          <h3>¿Tu relación de pareja te ha llevado a ser destructiva?</h3>
-          <div className="container-respuestas1">
-            {vecLabel.map((v) => (
-              <LabelComponent handleChange={() => handleChange(0, v.value)} v={v} />
-            ))}
+          <div className="container-pregunta1">
+            <h3>¿Tu relación de pareja te ha llevado a ser destructiva?</h3>
+            <div className="container-respuestas1">
+              {vecLabel.map((v) => (
+                <LabelComponent
+                  handleChange={() => handleChange(0, v.value)}
+                  v={v}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="container-pregunta1">
-          <h3>¿Tu pareja se irrita si le dices que fuma o bebe demasiado?</h3>
-          <div className="container-respuestas1">
-            {vecLabel.map((v) => (
-              <LabelComponent handleChange={() => handleChange(0, v.value)} v={v} />
-            ))}
+          <div className="container-pregunta1">
+            <h3>¿Tu pareja se irrita si le dices que fuma o bebe demasiado?</h3>
+            <div className="container-respuestas1">
+              {vecLabel.map((v) => (
+                <LabelComponent
+                  handleChange={() => handleChange(0, v.value)}
+                  v={v}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <button type="submit">Siguiente</button>
-      </form>
-    </div>
+          <button type="submit">Siguiente</button>
+        </form>
+      </div>
+    </>
   );
 };
 

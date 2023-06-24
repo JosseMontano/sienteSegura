@@ -11,12 +11,12 @@ const NavbarComponent = () => {
   return (
     <div className="nabvarPricipal">
       <ul className="menu">
-        <li>Inicio</li>
-        <li>Informacion</li>
-        <li>¿Como Ayudar?</li>
-        <li>Contacto</li>
-        <li>Encuesta</li>
-        <li>Iniciar Sesion</li>
+        <li onClick={() => handleClick("/")}>Inicio</li>
+        <li onClick={() => handleClick("/")}>Informacion</li>
+        <li onClick={() => handleClick("/")}>¿Como Ayudar?</li>
+        <li onClick={() => handleClick("/contactos")}>Contacto</li>
+        <li onClick={() => handleClick("/Formu")}>Encuesta</li>
+        <li onClick={() => handleClick("/login")}>Iniciar Sesion</li>
       </ul>
     </div>
   );
