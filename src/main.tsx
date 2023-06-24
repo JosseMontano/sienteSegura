@@ -5,6 +5,7 @@ import Login from "./login";
 import Register from "./register";
 import "./index.css";
 import { Route, Routes, HashRouter } from "react-router-dom";
+import Contactos from "./contactos";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
@@ -13,6 +14,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
         <Route path={"/"} element={<App />} />
         <Route path={"/login"} element={<Login />} />
         <Route path={"/register"} element={<Register />} />
+        <Route path={"/contactos"} element={<Contactos />} />
 
         <Route path="*" element={<p>Page no found</p>} />
       </Routes>
