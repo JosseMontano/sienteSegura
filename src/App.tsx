@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ImgRobot from "./assets/robot.png";
+import NavbarComponent from "./components/navbar";
 
 interface QuestionsType {
   question: string;
@@ -42,6 +43,8 @@ function App() {
   return (
     <div className="App">
       <div className="imagePrincipal">
+        <NavbarComponent />
+
         {!showChat && (
           <div className="containerChat">
             <div className="iconoChat" onClick={handleShowChat}>
@@ -68,31 +71,22 @@ function App() {
           </div>
         )}
 
-        <div className="nabvarPricipal">
-          <ul className="menu">
-            <li>Inicio</li>
-            <li>Informacion</li>
-            <li>¿Como Ayudar?</li>
-            <li>Contacto</li>
-            <li>Encuesta</li>
-            <li>Iniciar Sesion</li>
-          </ul>
-        </div>
-
         <div className="mensajePrincipal">
           <h2>BIENVENIDO A</h2>
           <h1>AURORA</h1>
           <div className="mensaje">
             <p>
-              "No estás sola en esta lucha. Hay una comunidad de mujeres fuertes <br/>
-              y solidarias dispuestas a apoyarte y acompañarte en tu camino<br/>
+              "No estás sola en esta lucha. Hay una comunidad de mujeres fuertes{" "}
+              <br />
+              y solidarias dispuestas a apoyarte y acompañarte en tu camino
+              <br />
               hacia la sanación y la recuperación."
             </p>
           </div>
         </div>
-        <br/>
-        <br/>
-        <br/>
+        <br />
+        <br />
+        <br />
         <div className="btnDenuncia">
           <button>DENUNCIA AQUI</button>
         </div>
@@ -135,8 +129,6 @@ function App() {
           </div>
         </div>
       )}
-
-      
     </div>
   );
 }
