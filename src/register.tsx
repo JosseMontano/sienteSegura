@@ -5,8 +5,8 @@ function Register() {
   return (
         <Container_son>
           <Conatiner_center>
-          <h3>AURORA</h3>
-          <p>Bienvenidos a Aurora</p>
+          <h3>REGISTRO</h3>
+          <p>Aurora te apoya en los momentos dificiles</p>
         <Imputs>
           <input type="text" id="username"/>
         </Imputs>
@@ -17,14 +17,20 @@ function Register() {
           <input type="password" id="username"/>
           </Imputs>
           <label htmlFor="password">Contraseña</label>
+          
+
+          <Imputs>
+          <input type="confirm-password" id="username"/>
+          </Imputs>
+          <label htmlFor="password-confirm">Confirmar contraseña</label>
 
         <div>
-            <Buttons>Iniciar Sesion</Buttons>
+            <Buttons>Registrarse</Buttons>
         </div>
 
         <Registro>
-          <p>Aun no tienes una cuenta? → </p>
-          <Buttons>Registrate</Buttons>
+          <p>Ya estas registrado → </p>
+          <Buttons>Iniciar Sesion</Buttons>
         </Registro>
         </Conatiner_center>   
       </Container_son>
