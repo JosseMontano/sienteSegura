@@ -6,6 +6,7 @@ import Login from "./login";
 import Register from "./register";
 import "./index.css";
 import { Route, Routes, HashRouter } from "react-router-dom";
+import Contactos from "./contactos";
 import Formu2 from "./Formu2";
 import Formu3 from "./Formu3";
 
@@ -19,6 +20,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
         <Route path={"/Formu3"} element={<Formu3 />} />
         <Route path={"/login"} element={<Login />} />
         <Route path={"/register"} element={<Register />} />
+        <Route path={"/contactos"} element={<Contactos />} />
 
         <Route path="*" element={<p>Page not found</p>} />
       </Routes>
